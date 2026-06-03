@@ -7,6 +7,10 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "ext-bcmath": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
         "laravel-lang/common": "^6.8",
         "laravel/framework": "^12.0",
         "laravel/sanctum": "^4.0",
