@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ['api/*', '*'],
     'allowed_methods' => ['*'],
-    'allowed_origins' => ['https://securemfa.vercel.app'],
+    'allowed_origins' => ['https://securemfa.vercel.app', 'http://localhost:8080'],
     'allowed_origins_patterns' => [],
     'allowed_headers' => ['*'],
     'exposed_headers' => [],

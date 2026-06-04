@@ -1,7 +1,11 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+
+// Handle CORS preflight
+Route::options('/{any}', function() {
+    return response()->json([], 200);
+})->where('any', '.*');
 
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/verify-otp', [AuthController::class, 'verifyOtp']);
