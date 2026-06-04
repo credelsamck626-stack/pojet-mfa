@@ -1,7 +1,18 @@
 <?php
 
-use App\Providers\AppServiceProvider;
+namespace App\Providers;
 
-return [
-    AppServiceProvider::class,
-];
+use Illuminate\Support\ServiceProvider;
+
+class AppServiceProvider extends ServiceProvider
+{
+    public function register(): void
+    {
+        //
+    }
+
+    public function boot(): void
+    {
+        //
+    }
+}
