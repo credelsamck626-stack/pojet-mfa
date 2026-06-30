@@ -58,18 +58,16 @@ class AuthController extends Controller
     public function register(Request $request)
     {
         $request->validate([
-            'name'            => 'required|string',
-            'prenom'          => 'required|string',
-            'email'           => 'required|email|unique:users',
-            'password'        => 'required|min:6',
-            'whatsapp_number' => 'required|string',
+            'name'     => 'required|string',
+            'prenom'   => 'required|string',
+            'email'    => 'required|email|unique:users',
+            'password' => 'required|min:6',
         ]);
 
         $user = User::create([
-            'name'            => $request->name . ' ' . $request->prenom,
-            'email'           => $request->email,
-            'password'        => Hash::make($request->password),
-            'whatsapp_number' => $request->whatsapp_number,
+            'name'     => $request->name . ' ' . $request->prenom,
+            'email'    => $request->email,
+            'password' => Hash::make($request->password),
         ]);
 
         return response()->json([
